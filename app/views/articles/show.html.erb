@@ -1,0 +1,21 @@
+<div class="d-flex my-3">
+  <h2 class=""><%= @article.title %></h2>
+  <div>
+    <%= link_to "<i class='fa-solid fa-pen-to-square'></i>".html_safe,
+    edit_article_path,
+    class: "fs-3 mx-3 link-secondary" %>
+  </div>
+  <div>
+    <%= link_to "<i class='fa-solid fa-trash-can'></i>".html_safe,
+    article_path(@article),
+    data: {turbo_method: :delete, turbo_confirm: "Delete this article?"},
+    class: "fs-3 mx-1 link-secondary" %>
+  </div>
+</div>
+<p><%= @article.content %></p>
+
+<div>
+  <%= link_to "<i class='fa-solid fa-left-long'></i> Go back".html_safe,
+  articles_path,
+  class: "fs-3 link-secondary" %>
+</div>

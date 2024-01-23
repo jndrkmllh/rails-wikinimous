@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.link-articles {
+  color: rgb(52, 122, 183);
+  text-decoration: none;
+}
